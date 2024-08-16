@@ -9,12 +9,17 @@ enum Shape {
 impl Shape {
     // TODO: Implement the `n_sides` method using a `match`.
     pub fn n_sides(&self) -> u8 {
-        todo!()
+        match self {
+            Shape::Circle => 0,
+            Shape::Triangle => 3,
+            Shape::Square | Shape::Rectangle => 4,
+            Shape::Pentagon => 5
+        }
     }
 }
 
-#[cfg(test)]
-mod tests {
+        #[cfg(test)]
+        mod tests {
     use super::*;
 
     #[test]
